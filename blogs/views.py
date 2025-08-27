@@ -14,8 +14,6 @@ def posts_by_category(request,category_id):
         category = Category.objects.get(pk=category_id)
     except:
         return redirect('home')
-    # use 404 to show error
-    # category = get_object_or_404(Category, pk=category_id)
     context = {
         'posts':posts,
         'category' : category

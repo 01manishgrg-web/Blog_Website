@@ -1,7 +1,4 @@
 {% extends 'base.html' %}
-
-
-
 {% block content %}
     
 <!-- Page content-->
@@ -70,7 +67,7 @@
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
                                 {% for cat in categories %}
-                                <li><a href="{% url 'posts_by_category' cat.id %}">{{ cat.category_name }}</a></li>
+                                <li><a href="{% url 'posts_by_category' cat.id %}">{{ cat.Category_name }}</a></li>
                                 {% endfor %}
                 
                             </ul>
@@ -79,12 +76,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Side widget-->
+            <!-- Side widget -->
             <div class="card mb-4 p-3">
                 <h4 class="font-italic">Follow Us</h4>
                 <ol class="list-unstyled">
                     <li><a href="#">GitHub</a></li>
-                    <li><a href="#">LinkedIn</a></li>
+                  
                 </ol>
             </div>
         </div>

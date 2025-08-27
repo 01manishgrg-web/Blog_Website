@@ -7,8 +7,6 @@
     <!-- left sidebar -->
     {% include './leftsidebar.html' %}
 
-
-
     <!-- right sidebar -->
     <div class="col-md-9">
         <h3>All Categories</h3>
@@ -25,7 +23,7 @@
         </thead>
         <tbody>
         {% for cat in categories %}
-            <tr>
+        <tr>
             <th>{{ forloop.counter }}</th>
             <td>{{ cat.Category_name }}</td>
             <td>{{ cat.created_at }}</td>
@@ -34,7 +32,7 @@
                 <a href="{% url 'edit_categories' cat.id %}"><i class="fa fa-edit text-success"></i></a> &nbsp;&nbsp;
                 <a href="{% url 'delete_categories' cat.id %}"><i class="fa fa-trash text-danger"></i></a>
             </td>
-            </tr>
+        </tr>
         {% endfor %}
         </tbody>
         </table>
