@@ -108,8 +108,9 @@ def edit_posts(request,pk):
             title = form.cleaned_data['title']
             post.slug = slugify(title)
             post.save()
-            return redirect('posts')   
-    form =BlogPostForm(instance=post)
+            return redirect('posts')
+    else:  
+        form =BlogPostForm(instance=post)
     context = {
         'form': form,
         'post': post,
